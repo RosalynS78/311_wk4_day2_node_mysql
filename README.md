@@ -95,3 +95,8 @@ Write a SQL statement to DELETE FROM users WHERE first_name = req param first_na
 ## Summary
 
 If all went according to plan we now have a full CRUD API that selects, inserts, updates and deletes from a SQL database. Great job! Take the time to start expanding on these concepts. 
+
+## had to install mysql2
+npm install mysql2 for athentication error
+- the problem is mysqljs in Node (the package you install with npm i mysql and use it in your Node code) doesn't support this new default authentication method of MySQL 8, yet.
+-node-mysql2 is supporting Authentication switch request. 
