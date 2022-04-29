@@ -1,13 +1,13 @@
-// const mysql = require("mysql");
+const mysql = require("mysql");
 const mysql2 = require ("mysql2");
 //import dotenv file
 require("dotenv").config();
 
 //store in a variable to use multiple times if needed
-const host = process.env.HOST;
-const user = process.env.USER;
-const password = process.env.PASSWORD;
-const database = process.env.DATABASE;
+// const host = process.env.HOST;
+// const user = process.env.USER;
+// const password = process.env.PASSWORD;
+// const database = process.env.DATABASE;
 
 //Create a connection
 class Connection {
@@ -18,10 +18,10 @@ class Connection {
         connectionLimit: 100,
 
         //see how were using the variables stored above to now secure our credentials
-        host: "localhost",
-        user: "root",
-        password: "rozzieP@n78",
-        database: "express_node",
+        host: process.env.HOST,
+        user: process.env.USER,
+        password:  process.env.PASSWORD,
+        database: process.env.DATABASE,
         //The important part of this code is understanding how we use env variables. don't worry about the other code so much.
       });
 
